@@ -59,6 +59,8 @@ primary key(codProd),
 foreign key(codForn) references tbFornecedores(codForn)
 );
 
+
+
 create table tbVendas(
 codVenda int not null auto_increment,
 dataVenda date,
@@ -100,3 +102,15 @@ select * from tbClientes;
 select * from tbUsuarios;
 select * from tbProdutos;
 select * from tbVendas;
+
+
+
+--Alterando os registros das tabelas
+
+
+
+update tbProdutos set descricao = 'Zagueiro', valor = 3.50 where codProd = 1;
+
+--visualizando depois da alteração
+
+select * from tbProdutos;
